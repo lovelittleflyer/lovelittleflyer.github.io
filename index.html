@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<audio controls="controls" autoplay="autoplay">
+    <source src="music-forxzzxy.mp3" type="audio/mpeg"/>
+</audio>
+
+<head>
+	<title>Our Love Story</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+				<span class="comments">/**</span><br />
+				<span class="space"/><span class="comments">* We are now in the fall of 2021, xiaofeifei.</span><br />
+				<span class="space"/><span class="comments">* Sometimes I call you "Little flyer" or baby.</span><br />
+				<span class="space"/><span class="comments">*/</span><br />
+				Boy i = <span class="keyword">new</span> Boy(<span class="string">"zhangzhen"</span>);<br />
+				Girl u = <span class="keyword">new</span> Girl(<span class="string">"hanxiaofei"</span>);<br />
+				<span class="comments">// August 25, 2021, We talked with each other first time . </span><br />
+				<span class="comments">// August 28, 2021, I met you, such a beauty. </span><br />
+				i.love(u);<br />
+				<span class="comments">// Luckily, you accepted me and we shared every-day life eversince.</span><br />
+				u.accepted();<br />
+				<span class="comments">// Since then, I miss u every day.</span><br />
+				i.miss(u);<br />
+				i.takeCareOf(u);<br />
+				<span class="comments">// I know you more and more.</span><br />
+				<span class="comments">// Sometimes we can get what each other is going to say or what to do.</span><br />
+				u.takeCareOf(me);<br />
+				<span class="comments">// Now We are young and have many expectations for the future.</span><br />
+				<span class="comments">// Look up at the starry sky, stand on solid ground.</span><br />
+				i.shouldDoMoreWith(u);<br />
+				<span class="comments">// And then we will have our dog, although name is not decided.</span><br />
+				i.liveHappilyWith(u);<br />
+				<span class="comments">// we had our dog, her name is gungun.</span><br />
+				we.takeCareOf(her);<br />
+				<span class="comments">// And we have our sweet time.</span><br />
+				i.miss(u);<br />
+				<span class="comments">// Loading...</span><br />
+
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						Little flyer, we have known each other for
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						Miss u forever and ever.<br/>
+						<div class="signature">- Zhen</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="copyright">
+			<br />	 
+			<br />	
+			<span class="comments"></span> </span><br />
+		</div>
+	</div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2021, 7, 21);
+		together.setHours(1);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+</body>
+</html>
